@@ -1,0 +1,14 @@
+[
+  { "nombre": "Americana", "ruta": "americana.jpg" },
+  { "nombre": "BBQ Chicken", "ruta": "bbq-chicken.jpg" },
+  { "nombre": "Campestre", "ruta": "campestre.jpg" },
+  { "nombre": "Dorada", "ruta": "dorada.jpg" },
+  { "nombre": "Española", "ruta": "espanola.jpg" },
+  { "nombre": "Hawaiana", "ruta": "hawaiana.jpg" },
+  { "nombre": "Italiana", "ruta": "italiana.jpg" },
+  { "nombre": "Margarita", "ruta": "margarita.jpg" },
+  { "nombre": "New-york", "ruta": "new-york.jpg" },
+  { "nombre": "Pepperoni", "ruta": "pepperoni.jpg" },
+  { "nombre": "Siciliana", "ruta": "siciliana.jpg" },
+  { "nombre": "Vegetariana", "ruta": "vegetariana.jpg" }
+]
