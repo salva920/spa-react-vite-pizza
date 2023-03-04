@@ -2,7 +2,7 @@ import imgCabecera from "../../assets/img/home/1-white.png"
 function Cabecera() {
   return (
     <div className="header-bg">
-      <div className="header-contenido d-flex justify-content-center align-items-center">
+      <div className="header-contenido d-flex justify-content-center align-items-center h-100">
         <div className="header-item d-flex flex-column align-items-center">
           <div>
             <img src={imgCabecera} />

@@ -192,7 +192,7 @@ footer{
 // contacto
 
 .img-comentario{
-    background: url('./img/home/pizza2.jpg');
+    background: url('./assets/img/home/pizza2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -219,8 +219,8 @@ label{
         font-weight: bold;
     }
 }
-
 .fadeIn {
+    opacity: 0;
     animation: 0.5s fadeIn forwards;
   }
   
@@ -241,7 +241,7 @@ label{
   
   @keyframes fadeOut {
     from {
-      opacity: 1;
+      opacity: 0;
       transform: translate(0px, 0px);
     }
     to {

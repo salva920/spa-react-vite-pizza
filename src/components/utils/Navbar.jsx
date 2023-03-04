@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import logo from '../../assets/img/logo.png';
+import { Link } from "react-router-dom";
+import logo from "../../assets/img/logo.png";
 function Navbar() {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
@@ -23,10 +23,18 @@ function Navbar() {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav">
-          <Link to={"/"} className="nav-link px-3">Inicio</Link>
-            <Link to={"/menu"} className="nav-link px-3">Menú</Link>
-            <Link to={"/contacto"} className="nav-link px-3">Contactanos</Link>
-            <Link to={"/about"} className="nav-link px-3">Acerca de</Link>
+            <Link to={"/"} className="nav-link px-3">
+              Inicio
+            </Link>
+            <Link to={"/menu"} className="nav-link px-3">
+              Menú
+            </Link>
+            <Link to={"/contacto"} className="nav-link px-3">
+              Contactanos
+            </Link>
+            <Link to={"/about"} className="nav-link px-3">
+              Acerca de
+            </Link>
           </div>
         </div>
       </div>
