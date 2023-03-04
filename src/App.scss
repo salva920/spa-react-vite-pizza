@@ -1,0 +1,242 @@
+@import "./scss/variables";
+@font-face {
+    font-family: 'komikax';
+    src: url('./assets/fonts/KOMIKAX_.ttf');
+}
+
+@font-face {
+    font-family: 'leckerliOne';
+    src: url('./assets/fonts/LeckerliOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'paybAck';
+    src: url('./assets/fonts/PaybAck.ttf');
+}
+
+@font-face {
+    font-family: 'chocolates';
+    src: url('./assets/fonts/TT-Chocolates-Regular.otf');
+}
+@import "bootstrap";
+
+@keyframes animacion1{
+    0%, 100% { transform: rotate(0deg);}
+    50% {transform: rotate(-5deg);}
+}
+
+@keyframes animacion2{
+    0%, 100% { transform: translateY(5px);}
+    50% {transform: translateY(-5px);}
+}
+
+@keyframes animacion3{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+    
+}
+
+.nav-link{
+    margin-left: 5px;
+
+    &:after {
+        content: "";
+        height: 2px;
+        width: 0px;
+        display: block;
+        background-color: $danger;
+        transition: .5s ease-in-out;
+    }
+
+    &:hover:after {
+        height: 2px;
+        width: 100%;
+        display: block;
+    }
+}
+
+.header-bg{
+    background: url(img/home/pepperoni.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header-contenido{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000, $alpha: .5);
+}
+
+.header-item div{
+    &:nth-of-type(1){
+        width: 40%;
+       img{
+        width: 100%;
+       }
+    }
+    &:nth-of-type(2){
+        font-family: 'komikax';
+        background: $warning;
+        animation: animacion1 4s ease-in infinite;
+        clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+        h1{
+            transform: rotate(-2deg);
+        }
+    }
+
+    &:nth-of-type(3){
+        font-family: 'leckerliOne';
+        background: $danger;
+        border: 1px solid black;
+        width: 50%;
+        animation: animacion2 5s ease-in infinite;
+        clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+        h1{
+            transform: rotate(-2deg);
+        }
+    }
+
+    &:nth-of-type(4){
+        font-family: 'komikax';
+        background: $success;
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+        animation: animacion1 4s ease-in infinite;
+        h1{
+            transform: rotate(-2deg);
+        }
+    }
+}
+
+.seccion1{
+    font-family: 'chocolates';
+    .pizza-rueda{
+        
+        height: 500px;
+        width: 500px;
+        position: absolute;
+        left: -300px;
+        margin-top: 30px;
+        animation: animacion3 60s linear infinite;
+    }
+}
+
+.seccion2{
+    background: #444444;
+    background: url("./img/home/horno.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .contenido{
+        width: 50%;
+        background: rgba(#000, $alpha: .6);
+        padding-top: 1rem * 5;
+        padding-bottom: 1rem * 5;
+
+        .sec2text{
+            font-family: 'paybAck';
+        }
+        .sec2subtext{
+            font-family: 'leckerliOne';
+        }
+    }
+}
+
+footer{
+    background: #000;
+    p{
+        font-family: 'chocolates';
+    }
+}
+
+
+.seccion-titulo{
+    font-family: 'komikax';
+}
+
+// menu
+.header2{
+    height: 50vh;
+    background: url("./img/home/suprema.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+
+    .header-bg{
+        background: rgba(#000, $alpha: .5);
+    }
+
+    h1{
+        font-family: 'komikax';
+        color: $danger;
+    }
+
+    h4{
+        font-family: 'leckerliOne';
+        color: $success;
+    }
+}
+
+.pizza-item{
+    background: $danger;
+    transition: all .5s ease-in;
+    &:hover{
+        background: $success;
+        box-shadow: 5px 5px 10px #fff;
+    }
+}
+
+// contacto
+
+.img-comentario{
+    background: url('./img/home/pizza2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 5s ease;
+    &:hover{
+        background-position: 0 0;
+    }
+}
+
+label{
+    font-family: 'chocolates';
+}
+
+.comentario{
+    height: 150px;
+}
+
+// about
+.contenido-texto p{
+    font-family: 'chocolates';
+    text-indent: 50px;
+    &:nth-of-type(1)::first-letter{
+        font-size: 200%;
+        font-weight: bold;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .header-bg{
+        height: 75vh;
+    }
+
+    .header-contenido{
+        height: 75%;
+    }
+
+}
+
+@include media-breakpoint-down(md) {
+    .seccion2 .contenido{
+        width: 100%;
+    }
+
+}
