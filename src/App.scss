@@ -56,7 +56,7 @@
 }
 
 .header-bg{
-    background: url(img/home/pepperoni.jpg);
+    background: url('./assets/img/home/pepperoni.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,9 +67,6 @@
 .header-contenido{
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     background-color: rgba(#000, $alpha: .5);
 }
 
@@ -128,7 +125,7 @@
 
 .seccion2{
     background: #444444;
-    background: url("./img/home/horno.jpg");
+    background: url("./assets/img/home/horno.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -222,6 +219,36 @@ label{
         font-weight: bold;
     }
 }
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+  }
+  
+  .fadeOut {
+    animation: 0.5s fadeOut forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-20px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    to {
+      transform: translate(-20px, 0);
+      opacity: 0;
+    }
+  }
 
 @include media-breakpoint-down(sm) {
     .header-bg{

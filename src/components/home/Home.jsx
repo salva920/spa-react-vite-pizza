@@ -1,15 +1,13 @@
-import { motion } from "framer-motion";
-function Home() {
+import Cabecera from "./Cabecera";
+import Seccion1 from "./Seccion1";
+import Seccion2 from "./Seccion2";
 
-    return (
-        <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-      >
-        <h1>Home</h1>
-      </motion.div>
-    )
-  }
-  
-  export default Home
+function Home() {
+  return <div>
+    <Cabecera />
+    <Seccion1 />
+    <Seccion2 />
+  </div>;
+}
+
+export default Home;
