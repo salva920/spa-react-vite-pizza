@@ -1,11 +1,13 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.scss'
+import AnimatedRoutes from './components/utils/AnimatedRoutes';
 
 function App() {
 
   return (
-    <div>
-      <h1>hola mundo</h1>
-    </div>
+    <BrowserRouter>
+      <AnimatedRoutes />
+    </BrowserRouter>
   )
 }
 
