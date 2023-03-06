@@ -1,269 +1,226 @@
+// importacion de los archivos con las variables, animaciones y fuentes
 @import "./scss/variables";
-@font-face {
-    font-family: 'komikax';
-    src: url('./assets/fonts/KOMIKAX_.ttf');
-}
+@import "./scss/fonts";
+@import "./scss/animations";
 
-@font-face {
-    font-family: 'leckerliOne';
-    src: url('./assets/fonts/LeckerliOne-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'paybAck';
-    src: url('./assets/fonts/PaybAck.ttf');
-}
-
-@font-face {
-    font-family: 'chocolates';
-    src: url('./assets/fonts/TT-Chocolates-Regular.otf');
-}
+// importacion de bootstrap
 @import "bootstrap";
 
-@keyframes animacion1{
-    0%, 100% { transform: rotate(0deg);}
-    50% {transform: rotate(-5deg);}
-}
+// diseño de efecto hover en los items del navbar
+.nav-link {
+  margin-left: 5px;
 
-@keyframes animacion2{
-    0%, 100% { transform: translateY(5px);}
-    50% {transform: translateY(-5px);}
-}
+  &:after {
+    content: "";
+    height: 2px;
+    width: 0px;
+    display: block;
+    background-color: $danger;
+    transition: 0.5s ease-in-out;
+  }
 
-@keyframes animacion3{
-    0% {transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-    
-}
-
-.nav-link{
-    margin-left: 5px;
-
-    &:after {
-        content: "";
-        height: 2px;
-        width: 0px;
-        display: block;
-        background-color: $danger;
-        transition: .5s ease-in-out;
-    }
-
-    &:hover:after {
-        height: 2px;
-        width: 100%;
-        display: block;
-    }
-}
-
-.header-bg{
-    background: url('./assets/img/home/pepperoni.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
+  &:hover:after {
+    height: 2px;
     width: 100%;
+    display: block;
+  }
 }
 
-.header-contenido{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#000, $alpha: .5);
+//  diseños de la cabecera y su contenido en la pagina principal
+.header-bg {
+  background: url("./assets/img/home/pepperoni.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.header-item div{
-    &:nth-of-type(1){
-        width: 40%;
-       img{
-        width: 100%;
-       }
-    }
-    &:nth-of-type(2){
-        font-family: 'komikax';
-        background: $warning;
-        animation: animacion1 4s ease-in infinite;
-        clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
-        h1{
-            transform: rotate(-2deg);
-        }
-    }
-
-    &:nth-of-type(3){
-        font-family: 'leckerliOne';
-        background: $danger;
-        border: 1px solid black;
-        width: 50%;
-        animation: animacion2 5s ease-in infinite;
-        clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
-        h1{
-            transform: rotate(-2deg);
-        }
-    }
-
-    &:nth-of-type(4){
-        font-family: 'komikax';
-        background: $success;
-        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
-        animation: animacion1 4s ease-in infinite;
-        h1{
-            transform: rotate(-2deg);
-        }
-    }
+.header-contenido {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, $alpha: 0.5);
 }
 
-.seccion1{
-    font-family: 'chocolates';
-    .pizza-rueda{
-        
-        height: 500px;
-        width: 500px;
-        position: absolute;
-        left: -300px;
-        margin-top: 30px;
-        animation: animacion3 60s linear infinite;
+.header-item div {
+  &:nth-of-type(1) {
+    width: 40%;
+    img {
+      width: 100%;
     }
-}
-
-.seccion2{
-    background: #444444;
-    background: url("./assets/img/home/horno.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    .contenido{
-        width: 50%;
-        background: rgba(#000, $alpha: .6);
-        padding-top: 1rem * 5;
-        padding-bottom: 1rem * 5;
-
-        .sec2text{
-            font-family: 'paybAck';
-        }
-        .sec2subtext{
-            font-family: 'leckerliOne';
-        }
+  }
+  &:nth-of-type(2) {
+    font-family: "komikax";
+    background: $warning;
+    animation: animacion1 4s ease-in infinite;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+    h1 {
+      transform: rotate(-2deg);
     }
-}
+  }
 
-footer{
-    background: #000;
-    p{
-        font-family: 'chocolates';
-    }
-}
-
-
-.seccion-titulo{
-    font-family: 'komikax';
-}
-
-// menu
-.header2{
-    height: 50vh;
-    background: url("./assets/img/home/suprema.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-
-    .header-bg{
-        background: rgba(#000, $alpha: .5);
-    }
-
-    h1{
-        font-family: 'komikax';
-        color: $danger;
-    }
-
-    h4{
-        font-family: 'leckerliOne';
-        color: $success;
-    }
-}
-
-.pizza-item{
+  &:nth-of-type(3) {
+    font-family: "leckerliOne";
     background: $danger;
-    transition: all .5s ease-in;
-    &:hover{
-        background: $success;
-        box-shadow: 5px 5px 10px #fff;
+    border: 1px solid black;
+    width: 50%;
+    animation: animacion2 5s ease-in infinite;
+    clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+    h1 {
+      transform: rotate(-2deg);
     }
+  }
+
+  &:nth-of-type(4) {
+    font-family: "komikax";
+    background: $success;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+    animation: animacion1 4s ease-in infinite;
+    h1 {
+      transform: rotate(-2deg);
+    }
+  }
+}
+
+/* 
+    estilo de la primera seccion de la pagina principal
+    principalmente en la pizza que gira y el tipo de fuente
+*/
+.seccion1 {
+  font-family: "chocolates";
+  .pizza-rueda {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    left: -300px;
+    margin-top: 30px;
+    animation: animacion3 60s linear infinite;
+  }
+}
+
+/* 
+    en la segunda seccion del inicio se le agrega una imagen de fondo de pantalla,
+    tambien se coloca un fondo oscuro translucido en la parte del contenido
+*/
+.seccion2 {
+  background: url("./assets/img/home/horno.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .contenido {
+    width: 50%;
+    background: rgba(#000, $alpha: 0.6);
+    padding-top: 1rem * 5;
+    padding-bottom: 1rem * 5;
+
+    .sec2text {
+      font-family: "paybAck";
+    }
+    .sec2subtext {
+      font-family: "leckerliOne";
+    }
+  }
+}
+
+.seccion-titulo {
+  font-family: "komikax";
+}
+
+/* 
+    diseño de la cabecera de las paginas de menu, contacto y acerca de
+*/
+.header2 {
+  height: 50vh;
+  background: url("./assets/img/home/suprema.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+
+  .header-bg {
+    background: rgba(#000, $alpha: 0.5);
+  }
+
+  h1 {
+    font-family: "komikax";
+    color: $danger;
+  }
+
+  h4 {
+    font-family: "leckerliOne";
+    color: $success;
+  }
+}
+
+// efecto hover para cada item del menu
+.pizza-item {
+  background: $danger;
+  transition: all 0.5s ease-in;
+  &:hover {
+    background: $success;
+    box-shadow: 5px 5px 10px #fff;
+  }
 }
 
 // contacto
 
-.img-comentario{
-    background: url('./assets/img/home/pizza2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 5s ease;
-    &:hover{
-        background-position: 0 0;
-    }
+.img-comentario {
+  background: url("./assets/img/home/pizza2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 5s ease;
+  &:hover {
+    background-position: 0 0;
+  }
 }
 
-label{
-    font-family: 'chocolates';
+label {
+  font-family: "chocolates";
 }
 
-.comentario{
-    height: 150px;
+.comentario {
+  height: 150px;
 }
 
-// about
-.contenido-texto p{
-    font-family: 'chocolates';
-    text-indent: 50px;
-    &:nth-of-type(1)::first-letter{
-        font-size: 200%;
-        font-weight: bold;
-    }
+
+.contenido-texto p {
+  font-family: "chocolates";
+  text-indent: 50px;
+  &:nth-of-type(1)::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+  }
 }
+
+// clases para las transiciones entre paginas
 .fadeIn {
-    opacity: 0;
-    animation: 0.5s fadeIn forwards;
-  }
-  
-  .fadeOut {
-    animation: 0.5s fadeOut forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-20px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-  }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 0;
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-20px, 0);
-      opacity: 0;
-    }
-  }
+  opacity: 0;
+  animation: 0.5s fadeIn forwards;
+}
 
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
+
+footer {
+    background: #000;
+    p {
+      font-family: "chocolates";
+    }
+  }
 @include media-breakpoint-down(sm) {
-    .header-bg{
-        height: 75vh;
-    }
+  .header-bg {
+    height: 75vh;
+  }
 
-    .header-contenido{
-        height: 75%;
-    }
-
+  .header-contenido {
+    height: 75%;
+  }
 }
 
 @include media-breakpoint-down(md) {
-    .seccion2 .contenido{
-        width: 100%;
-    }
-
+  .seccion2 .contenido {
+    width: 100%;
+  }
 }

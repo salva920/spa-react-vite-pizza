@@ -1,3 +1,4 @@
+// elemento Link que permite al usuario navegar a otra página como si fuera una etiqueta 'a' de html
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 function Navbar() {

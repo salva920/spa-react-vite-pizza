@@ -1,16 +1,12 @@
-import pizza from '../../assets/img/icons/pizza.png'
-import restaurante from '../../assets/img/icons/restaurante.png'
-import menu from '../../assets/img/icons/menu.png'
-import ruedaPizza from '../../assets/img/home/pizza.png'
+import pizza from "../../assets/img/icons/pizza.png";
+import restaurante from "../../assets/img/icons/restaurante.png";
+import menu from "../../assets/img/icons/menu.png";
+import ruedaPizza from "../../assets/img/home/pizza.png";
 
 function Seccion1() {
   return (
     <section className="seccion1 container">
-      <img
-        src={ruedaPizza}
-        alt=""
-        className="pizza-rueda d-none d-lg-block"
-      />
+      <img src={ruedaPizza} alt="" className="pizza-rueda d-none d-lg-block" />
 
       <div className="my-5 w-100 text-center text-danger seccion-titulo">
         <h1>SERVICIOS</h1>
@@ -19,10 +15,12 @@ function Seccion1() {
       <div className="row justify-content-end">
         <div className="col col-lg-10">
           <p className="servicios-p fs-5 mx-5">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Dignissimos aperiam doloribus praesentium obcaecati similique ad
-            adipisci ipsam fugit cupiditate cumque velit omnis quam ex, et
-            voluptatibus odio veniam reiciendis exercitationem.
+            Pizza Club se ha convertido en una cadena de comida rápida donde el
+            principal compromiso es brindarle a nuestros clientes pizzas con un
+            sabor único, ingredientes de alta calidad y un servicio de primera.
+            Nos diferenciamos por utilizar vegetales frescos, no recortamos en
+            gastos usando vegetales enlatados ni previamente cortados en
+            nuestras pizzas.
           </p>
 
           <div className="row mt-3 px-2">
@@ -36,9 +34,9 @@ function Seccion1() {
               </div>
 
               <p className="fs-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptates, mollitia incidunt. Magni, placeat! Exercitationem
-                maxime saepe sunt ex facilis atque.
+                Nos esforzamos por brindar las pizzas de mejor sabor usando los
+                ingredientes más frescos. Nos comprometemos a usar solo
+                ingredientes de calidad.
               </p>
             </div>
             <div className="col-12 col-md-4 px-3 text-center">
@@ -51,9 +49,9 @@ function Seccion1() {
               </div>
 
               <p className="fs-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptates, mollitia incidunt. Magni, placeat! Exercitationem
-                maxime saepe sunt ex facilis atque.
+                Tenemos un amplio menú de sabores. Disfrute de nuestra variedad
+                de pizzas además de otros servicios de comida. Trabajamos cada
+                día para brindar la mejor combinación de sabores.
               </p>
             </div>
             <div className="col-12 col-md-4 px-3 text-center">
@@ -66,9 +64,9 @@ function Seccion1() {
               </div>
 
               <p className="fs-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptates, mollitia incidunt. Magni, placeat! Exercitationem
-                maxime saepe sunt ex facilis atque.
+                En Pizza Club nos esforzamos diariamente para ofrecer el mejor
+                servicio a nuestros clientes, tratando de ofrecer la mejor
+                experiencia en un ambiente familiar.
               </p>
             </div>
           </div>

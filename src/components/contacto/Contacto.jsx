@@ -2,20 +2,25 @@ import { useState } from "react";
 import Header from "../utils/Header";
 
 function Contacto() {
+  // se crea un estado local que almacena los datos del formulario 
+  // y los mensajes de notificación de error o exito
   const [email, setEmail] = useState("");
   const [nombre, setNombre] = useState("");
   const [comentario, setComentario] = useState("");
   const [msg, setMsg] = useState(false);
   const [errMsg, setErrMsg] = useState(false);
 
+  // funsion que se ejecuta cuando se envie el formulario
   const handleSubmit = (e) => {
     e.preventDefault();
+    // comprueba que los datos no esten vacios, si la condicion se cumple da error
     if (email.trim() == "" || nombre.trim() == "" || comentario.trim() == "") {
       setErrMsg(true);
       setMsg(false);
       return;
     }
 
+    // si todo esta bien, retorna un mensaje de exito y rainicia el formulario
     setErrMsg(false);
     setMsg(true);
 

@@ -1,4 +1,5 @@
-function Menu() {
+// Componente Footer que se usa en todas las paginas
+function Footer() {
   return (
     <footer className="seccion3 d-flex justify-content-center align-items-center py-4">
       <p>PIZZA CLUB &copy;2023</p>
@@ -6,4 +7,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Footer;
