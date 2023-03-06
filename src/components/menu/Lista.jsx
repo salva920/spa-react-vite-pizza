@@ -11,6 +11,7 @@ function Lista() {
   const listaPizzas = async () => {
     const response = await fetch("/src/assets/pizzas.json");
     const data = await response.json();
+    console.log(data);
     setPizzas(data);
   };
 
@@ -23,7 +24,7 @@ function Lista() {
     <div className="container text-center my-5">
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
         {pizzas.map((item, i) => (
-          <ItemLista key={i} nombre={item.nombre} ruta={item.ruta} />
+          <ItemLista key={i} nombre={item.nombre} archivo={item.ruta} />
         ))}
       </div>
     </div>
