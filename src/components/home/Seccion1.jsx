@@ -3,9 +3,9 @@ import restaurante from "../../assets/img/icons/restaurante.png";
 import menu from "../../assets/img/icons/menu.png";
 import ruedaPizza from "../../assets/img/home/pizza.png";
 
-function Seccion1() {
+function Seccion1({toServicio}) {
   return (
-    <section className="seccion1 container">
+    <section className="seccion1 container" ref={toServicio}>
       <img src={ruedaPizza} alt="" className="pizza-rueda d-none d-lg-block" />
 
       <div className="my-5 w-100 text-center text-danger seccion-titulo">

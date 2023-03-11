@@ -39,8 +39,8 @@ function Contacto() {
 
       <div className="container-fluid text-center">
         <div className="row">
-          <div className="col img-comentario d-none d-md-block"></div>
-          <div className="col my-5 px-4 text-start">
+          <div className="col col-md-6 img-comentario d-none d-md-block"></div>
+          <div className="col col-md-6 my-5 px-4 text-start">
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">

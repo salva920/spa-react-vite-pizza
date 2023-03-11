@@ -155,10 +155,11 @@
 // efecto hover para cada item del menu
 .pizza-item {
   background: $danger;
-  transition: all 0.5s ease-in;
+  border: 2px solid $danger;
+  transition: all 0.2s ease-in;
   &:hover {
     background: $success;
-    box-shadow: 5px 5px 10px #fff;
+    border-color: $success;
   }
 }
 
@@ -191,6 +192,13 @@ label {
     font-size: 200%;
     font-weight: bold;
   }
+}
+
+.modo-oscuro{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all .5s linear;
 }
 
 // clases para las transiciones entre paginas

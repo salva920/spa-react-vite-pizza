@@ -1,13 +1,17 @@
 // elemento Link que permite al usuario navegar a otra página como si fuera una etiqueta 'a' de html
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
-function Navbar() {
+function Navbar({ tema }) {
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg fixed-top bg-dark">
+    <nav
+      className={`navbar navbar-expand-lg fixed-top ${
+        tema ? "bg-dark navbar-dark" : "bg-secondary navbar-light"
+      }`}
+    >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to={"/"} className="navbar-brand">
           <img src={logo} alt="img" width="100" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
