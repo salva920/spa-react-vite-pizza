@@ -4,6 +4,7 @@ import About from "../about/About";
 import Contacto from "../contacto/Contacto";
 import Menu from "../menu/Menu";
 import { useState, useEffect } from "react";
+import PageNotFound from "./PageNotFound";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function AnimatedRoutes() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
